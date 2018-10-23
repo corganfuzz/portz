@@ -1,0 +1,14 @@
+<igx-grid #grid [data]="data">
+  <igx-column dataType="string" field="Name">
+    <ng-template igxCell let-cell="cell">
+      <!-- Implement row deleting inside the cell template itself -->
+      <span tabindex="0" (keydown.delete)="grid.deleteRow(cell.rowIndex)">{{ cell.value | titlecase }}</span>
+    </ng-template>
+  </igx-column>
+  <igx-column dataType="boolean" field="Subscribtion">
+    <ng-template igxCell let-cell="cell">
+      <!-- Bind the cell value through the ngModel directive and update the data source when the value is changed in the template -->
+      <!-- <input type="checkbox" [ngModel]="cell.value" (ngModelChange)="cell.update($event)" /> -->
+    </ng-template>
+  </igx-column>
+  <igx-grid>
