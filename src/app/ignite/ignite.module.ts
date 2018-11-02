@@ -10,6 +10,11 @@ import {
   IgxTabsModule,
   IgxCardModule,
   IgxGridModule,
+  IgxSwitchModule,
+  IgxInputGroupModule,
+  IgxProgressBarModule,
+  IgxBadgeModule,
+  IgxAvatarModule,
 } from 'igniteui-angular';
 
 @NgModule({
@@ -24,6 +29,11 @@ import {
     IgxTabsModule,
     IgxCardModule,
     IgxGridModule.forRoot(),
+    IgxSwitchModule,
+    IgxInputGroupModule,
+    IgxProgressBarModule,
+    IgxBadgeModule,
+    IgxAvatarModule,
   ],
   exports: [
     IgxButtonModule,
@@ -36,6 +46,11 @@ import {
     IgxTabsModule,
     IgxCardModule,
     IgxGridModule,
+    IgxSwitchModule,
+    IgxInputGroupModule,
+    IgxProgressBarModule,
+    IgxBadgeModule,
+    IgxAvatarModule,
   ],
 })
 export class IgniteModule {}

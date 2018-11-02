@@ -7,10 +7,24 @@ import { HeaderComponent } from './header/header.component';
 import { DrawerComponent } from './drawer/drawer.component';
 import { GraphcardsComponent } from './graphcards/graphcards.component';
 import { OperationaltableComponent } from './operationaltable/operationaltable.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, DrawerComponent, GraphcardsComponent, OperationaltableComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, IgniteModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    DrawerComponent,
+    GraphcardsComponent,
+    OperationaltableComponent,
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    IgniteModule,
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
