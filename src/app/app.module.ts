@@ -9,6 +9,7 @@ import { GraphcardsComponent } from './graphcards/graphcards.component';
 import { OperationaltableComponent } from './operationaltable/operationaltable.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RemotetableComponent } from './remotetable/remotetable.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     DrawerComponent,
     GraphcardsComponent,
     OperationaltableComponent,
+    RemotetableComponent,
   ],
   imports: [
     BrowserModule,
