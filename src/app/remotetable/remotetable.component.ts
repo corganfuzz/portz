@@ -5,17 +5,16 @@ import { RemoteserviceService } from '../_services/remoteops/remoteservice.servi
 @Component({
   selector: 'app-remotetable',
   templateUrl: './remotetable.component.html',
-  styleUrls: ['./remotetable.component.css']
+  styleUrls: ['./remotetable.component.css'],
 })
 export class RemotetableComponent implements OnInit {
-
   remoteData: Observable<any>;
 
-  constructor(private remoteService: RemoteserviceService) { }
+  constructor(private remoteService: RemoteserviceService) {}
 
   ngOnInit() {
-    console.log(this.remoteService);
-    this.remoteData = this.remoteService.data;
+    this.remoteService.getData().subscribe(items => {
+      this.remoteData = items.value;
+    });
   }
-
 }

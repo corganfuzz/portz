@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { OptabledataService } from '../_services/optabledata/optabledata.service';
+// import { OptabledataService } from '../_services/optabledata/optabledata.service';
 // import { FinancialData } from '../_services/optabledata/financialData';
 import { IgxGridModule } from 'igniteui-angular';
 
@@ -10,9 +10,9 @@ import { IgxGridModule } from 'igniteui-angular';
   encapsulation: ViewEncapsulation.None,
 })
 export class OperationaltableComponent implements OnInit {
-  constructor(private optableDataService: OptabledataService) {
-    this.optableDataService.getData(100000);
-    this.data = this.optableDataService.records;
+  constructor() {
+    // this.optableDataService.getData(100000);
+    // this.data = this.optableDataService.records;
   }
 
   @ViewChild('grid1')
@@ -25,9 +25,9 @@ export class OperationaltableComponent implements OnInit {
   }
 
   getActualD() {
-    this.optableDataService.getActualData().subscribe(response => {
-      console.log(response);
-    });
+    // this.optableDataService.getActualData().subscribe(response => {
+    //   console.log(response);
+    // });
   }
 
   formatNumber(value: number) {
