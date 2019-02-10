@@ -1,4 +1,6 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import { RemoteserviceService } from '../_services/remoteops/remoteservice.service';
 
 @Component({
   selector: 'app-remotetable',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RemotetableComponent implements OnInit {
 
-  constructor() { }
+  remoteData: Observable<any>;
+
+  constructor(private remoteService: RemoteserviceService) { }
 
   ngOnInit() {
+    console.log(this.remoteService);
+    this.remoteData = this.remoteService.data;
   }
 
 }

@@ -28,7 +28,7 @@ import {
     IgxNavbarModule,
     IgxTabsModule,
     IgxCardModule,
-    IgxGridModule.forRoot(),
+    IgxGridModule,
     IgxSwitchModule,
     IgxInputGroupModule,
     IgxProgressBarModule,

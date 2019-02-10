@@ -9,11 +9,10 @@
     <div class="remote-data-loading-template-small"></div>
   </ng-template>
 
-  <igx-grid #grid [data]="remoteData | async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'
-    (onDataPreLoad)="processData(false)" (onSortingDone)="processData(true)">
+  <igx-grid #grid [data]="remoteData |async" [height]="'500px'" [width]="'100%'" [autoGenerate]='false'>
     <igx-column [field]="'ProductID'" [sortable]="true"></igx-column>
     <igx-column [field]="'ProductName'" [sortable]="true"></igx-column>
-    <igx-column [field]="'UnitPrice'" [dataType]="'number'" [formatter]="formatCurrency" [sortable]="true"></igx-column>
+    <!-- <igx-column [field]="'UnitPrice'" [dataType]="'number'" [formatter]="formatCurrency" [sortable]="true"></igx-column> -->
     <igx-column [field]="'UnitsInStock'" [dataType]="'number'" [headerClasses]="'headerAlignSyle'" [sortable]="true">
       <ng-template igxHeader>
         <span class="cellAlignSyle">UnitsInStock</span>
@@ -22,7 +21,7 @@
         <div class="currency-badge-container">
           <igx-badge *ngIf="val>50" type="success" position="bottom-right" icon="arrow_upward" class="badge-left"></igx-badge>
           <igx-badge *ngIf="val<=50" type="error" position="bottom-right" icon="arrow_downward" class="error badge-left"></igx-badge>
-          <span class="cellAlignSyle" [class.up]="val>50" [class.down]="val<=50">{{ formatNumber(val) }}</span>
+          <!-- <span class="cellAlignSyle" [class.up]="val>50" [class.down]="val<=50">{{ formatNumber(val) }}</span> -->
         </div>
       </ng-template>
     </igx-column>
@@ -35,7 +34,7 @@
         <div class="currency-badge-container">
           <igx-badge *ngIf="val>20" type="success" position="bottom-right" icon="arrow_upward" class="badge-left"></igx-badge>
           <igx-badge *ngIf="val<=20" type="error" position="bottom-right" icon="arrow_downward" class="error badge-left"></igx-badge>
-          <span class="cellAlignSyle" [class.up]="val>0" [class.down]="val<=0">{{ formatNumber(val) }}</span>
+          <!-- <span class="cellAlignSyle" [class.up]="val>0" [class.down]="val<=0">{{ formatNumber(val) }}</span> -->
         </div>
       </ng-template>
     </igx-column>

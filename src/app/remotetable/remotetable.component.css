@@ -38,7 +38,7 @@
   height: 15px;
 }
 
-.remote-data-loading-template-medium {
+/* .remote-data-loading-template-medium {
   @extend .remote-data-loading-template;
   width: 30px;
 }
@@ -51,4 +51,4 @@
 .remote-data-loading-template-small {
   @extend .remote-data-loading-template;
   width: 20px;
-}
+} */
