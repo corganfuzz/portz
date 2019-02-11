@@ -13,8 +13,10 @@ export class RemotetableComponent implements OnInit {
   constructor(private remoteService: RemoteserviceService) {}
 
   ngOnInit() {
-    this.remoteService.getData().subscribe(items => {
-      this.remoteData = items.value;
-    });
+    this.remoteData = this.remoteService.getData();
+    // this.remoteService.getData().subscribe(items => {
+
+    //   this.remoteData = items.value;
+    // });
   }
 }

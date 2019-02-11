@@ -13,7 +13,7 @@ export class RemoteserviceService {
 
   constructor(private http: HttpClient) {}
 
-  getData(): Observable<any> {
+  getData() {
     const apiCall = this.http.get<any>(DATA_URL);
     return apiCall;
   }
